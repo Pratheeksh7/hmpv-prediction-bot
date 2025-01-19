@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='static')
 CORS(app)
 
 # Load the trained model
-with open('covid_model.pkl', 'rb') as file:
+with open('hmpv_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Define global variables for the chat state
@@ -31,13 +31,7 @@ def serve_static(filename):
 @app.route('/')
 def serve_welcome():
     """Serve the welcome HTML file."""
-    print("welcome")
     return send_from_directory(app.static_folder, 'welcome.html')
-
-@app.route('/index')
-def serve_index():
-    """Serve the frontend HTML file."""
-    return send_from_directory(app.static_folder,'index.html')
 
 
 @app.route('/start', methods=['GET'])
