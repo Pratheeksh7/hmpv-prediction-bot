@@ -18,7 +18,7 @@ questions = [
     "Do you have a runny nose? (yes/no)",
     "Are you experiencing difficulty breathing? (yes/no)",
     "What is your age?",
-    "Do you have a rash? (yes/no)"
+    "Are you experiencing any fatigue? (yes/no)"
 ]
 responses = []
 
